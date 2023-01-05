@@ -70,6 +70,14 @@
 			<artifactId>school</artifactId>
 			<version>v1</version>
 		</dependency>
+		
+		<!-- auto reload changes using LiveReload and DevTools-->
+		<dependency>
+    		<groupId>org.springframework.boot</groupId>
+    		<artifactId>spring-boot-devtools</artifactId>
+    		<scope>runtime</scope>
+    		<optional>true</optional>
+		</dependency>
 	</dependencies>
 
 	<build>

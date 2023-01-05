@@ -15,16 +15,16 @@ import com.springboot3.user.Role;
 
 public interface TodoApi {
 
-	@PostMapping(value = "todo/create" , consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
+	@PostMapping(value = "todo/api/create" , consumes = MediaType.APPLICATION_JSON_VALUE , produces = MediaType.APPLICATION_JSON_VALUE)
 	TodoDto save(@RequestBody TodoDto dto);
 	
-	@GetMapping(value = "todo/id/{idTodo}")
+	@GetMapping(value = "todo/api/id/{idTodo}")
 	TodoDto findById(@PathVariable("idTodo") Integer id);
 	
-	@GetMapping(value ="todos/all")
+	@GetMapping(value ="todo/api/all")
 	List<TodoDto> findAll();
 	
-	@DeleteMapping(value ="todo/delete/{idTodo}")
+	@DeleteMapping(value ="todo/api/delete/{idTodo}")
 	void delete (@PathVariable("idTodo") Integer id);
 	
 	
